@@ -9,23 +9,107 @@
   "featuredApps": [],
   "apps": [
     {
+      "name": "unc0ver",
+      "bundleIdentifier": "science.xnu.undecimus",
+      "marketplaceID": "",
+      "developerName": "un0ver Development Team",
+      "subtitle": "Jailbreak for iOS 11.0 - 14.8",
+      "localizedDescription": "",
+      "iconURL": "https://i.imgur.com/N10pplZ.png",
+      "tintColor": "#3636c8",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [
+        {
+          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/raw/refs/heads/main/ipas/unc0ver_Release_8.0.2.ipa",
+          "size": 54500000,
+          "version": "8.0.2",
+          "buildVersion": null,
+          "date": "2025-08-18T16:28:00-10:00",
+          "localizedDescription": null,
+          "minOSVersion": null
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    },
+    {
+      "name": "Dopamine",
+      "bundleIdentifier": "com.opa334.Dopamine",
+      "marketplaceID": "",
+      "developerName": "Dopamine Development Team",
+      "subtitle": "Jailbreak for iOS 15.0 - 16.6.1*",
+      "localizedDescription": "",
+      "iconURL": "https://i.imgur.com/eKUTllo.png",
+      "tintColor": "#a786a4",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [
+        {
+          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/raw/refs/heads/main/ipas/Dopamine.ipa",
+          "size": 53200000,
+          "version": "2.4.5",
+          "buildVersion": null,
+          "date": "2025-08-18T16:29:00-10:00",
+          "localizedDescription": null,
+          "minOSVersion": null
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    },
+    {
+      "name": "freya",
+      "bundleIdentifier": "com.p4e.freya",
+      "marketplaceID": "",
+      "developerName": "pwned4ever",
+      "subtitle": "Jailbreak for iOS 11.0 - 12.5.6",
+      "localizedDescription": "",
+      "iconURL": "https://i.imgur.com/l32cC44.png",
+      "tintColor": "#e1311d",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [
+        {
+          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/raw/refs/heads/main/ipas/Freya.ipa",
+          "size": 58000000,
+          "version": "1.3.8",
+          "buildVersion": null,
+          "date": "2025-08-18T16:29:00-10:00",
+          "localizedDescription": null,
+          "minOSVersion": null
+        }
+      ],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    },
+    {
       "name": "ChimeraPatch",
       "bundleIdentifier": "com.1504.3905",
       "marketplaceID": "",
       "developerName": "Example Developer",
       "subtitle": "Jailbreak for iOS 12 - 12.5.7 (A7/A8X Patch)",
-      "localizedDescription": "",
+      "localizedDescription": "This is an awesome app only available on AltStore.",
       "iconURL": "https://i.imgur.com/umgukoF.png",
       "tintColor": "#10c2ee",
       "category": "utilities",
       "screenshots": [],
       "versions": [
         {
-          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/blob/main/ipas/chimera-patch.ipa",
+          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/raw/refs/heads/main/ipas/chimera-patch.ipa",
           "size": 34500000,
           "version": "1.6.5",
           "buildVersion": null,
-          "date": "2025-08-18T08:14:00-10:00",
+          "date": "2025-08-18T16:34:00-10:00",
           "localizedDescription": null,
           "minOSVersion": null
         }
@@ -42,18 +126,18 @@
       "marketplaceID": "",
       "developerName": "Trollstore Team and Contributors",
       "subtitle": "Permasign apps while Jailed",
-      "localizedDescription": "",
+      "localizedDescription": "This is an awesome app only available on AltStore.",
       "iconURL": "https://i.imgur.com/TDEb7Hr.png",
       "tintColor": "#04b9fc",
       "category": "utilities",
       "screenshots": [],
       "versions": [
         {
-          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/blob/main/ipas/TrollInstallerX.ipa",
+          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/raw/refs/heads/main/ipas/TrollInstallerX.ipa",
           "size": 6900000,
           "version": "1.0.3",
           "buildVersion": null,
-          "date": "2025-08-18T08:13:00-10:00",
+          "date": "2025-08-18T16:33:00-10:00",
           "localizedDescription": null,
           "minOSVersion": null
         }
@@ -79,11 +163,11 @@
       "screenshots": [],
       "versions": [
         {
-          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/blob/main/ipas/Taurine.1.1.7-3.ipa",
+          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/raw/refs/heads/main/ipas/Taurine.1.1.7-3.ipa",
           "size": 32200000,
           "version": "1.1.7-3",
           "buildVersion": null,
-          "date": "2025-08-18T08:12:00-10:00",
+          "date": "2025-08-18T16:34:00-10:00",
           "localizedDescription": null,
           "minOSVersion": null
         }
@@ -102,19 +186,19 @@
       "marketplaceID": "",
       "developerName": "Electra Development Team",
       "subtitle": "Jailbreak for 11.0 – 11.4.1",
-      "localizedDescription": "",
+      "localizedDescription": "This is an awesome app only available on AltStore.",
       "iconURL": "https://i.imgur.com/YM9eN7X.png",
       "tintColor": "#6b7f93",
       "category": "utilities",
       "screenshots": [],
       "versions": [
         {
-          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/blob/main/ipas/Electra1141-2.0.ipa",
-          "size": 52200000,
           "version": "2.0",
-          "buildVersion": null,
-          "date": "2025-08-18T08:11:00-10:00",
+          "date": "2025-08-18T18:11:00-10:00",
           "localizedDescription": null,
+          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/raw/refs/heads/main/ipas/Electra1141-2.0.ipa",
+          "size": 52200000,
+          "buildVersion": null,
           "minOSVersion": null
         }
       ],
@@ -137,12 +221,12 @@
       "screenshots": [],
       "versions": [
         {
-          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/blob/main/ipas/Undecimus.ipa",
-          "size": 38300000,
           "version": "1.2.3",
-          "buildVersion": null,
-          "date": "2025-08-18T08:12:00-10:00",
+          "date": "2025-08-18T18:12:00-10:00",
           "localizedDescription": null,
+          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/raw/refs/heads/main/ipas/Undecimus.ipa",
+          "size": 38300000,
+          "buildVersion": null,
           "minOSVersion": null
         }
       ],
@@ -158,19 +242,19 @@
       "marketplaceID": "",
       "developerName": "CoolStar and their team",
       "subtitle": "Jailbreak for iOS 12 - 12.5.7",
-      "localizedDescription": "",
+      "localizedDescription": "This is an awesome app only available on AltStore.",
       "iconURL": "https://i.imgur.com/Z8TKTQS.png",
       "tintColor": "#10c2ee",
       "category": "utilities",
       "screenshots": [],
       "versions": [
         {
-          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/blob/main/ipas/chimera.ipa",
-          "size": 34400000,
           "version": "1.6.5",
-          "buildVersion": null,
-          "date": "2025-08-18T08:13:00-10:00",
+          "date": "2025-08-18T18:13:00-10:00",
           "localizedDescription": null,
+          "downloadURL": "https://github.com/wakefulblock262/wakefuls-repo/raw/refs/heads/main/ipas/chimera.ipa",
+          "size": 34400000,
+          "buildVersion": null,
           "minOSVersion": null
         }
       ],
