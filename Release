@@ -1,0 +1,8 @@
+Origin: Wakeful
+Label: Wakeful's Jailbreak Repo
+Suite: stable
+Codename: ios
+Version: 1.0
+Architectures: iphoneos-arm
+Components: main
+Description: Wakeful's Repo for iOS tweaks
