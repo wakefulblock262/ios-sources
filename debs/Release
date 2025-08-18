@@ -3,6 +3,6 @@ Label: Wakeful's Tweak Repo
 Suite: stable
 Codename: ios
 Version: 1.0
-Architectures: iphoneos-arm
+Architectures: iphoneos-arm iphoneos-arm64
 Components: main
 Description: Wakeful's Repo for iOS tweaks
