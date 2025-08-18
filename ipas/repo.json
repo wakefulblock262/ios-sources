@@ -1,0 +1,161 @@
+{
+  "name": "Wakeful's Repo",
+  "subtitle": "A source for all of my apps",
+  "description": "Welcome to my source! Here you'll find all of my apps.",
+  "iconURL": "https://i.imgur.com/gxBvNdb.png",
+  "website": "https://wakefulblock262.github.io/wakefuls-repo/",
+  "patreonURL": "",
+  "tintColor": "#a786a4",
+  "featuredApps": [],
+  "apps": [
+    {
+      "name": "TrollInstallerX",
+      "bundleIdentifier": "com.Alfie.TrollInstallerX",
+      "marketplaceID": "",
+      "developerName": "Trollstore Team and Contributors",
+      "subtitle": "Permasign apps while Jailed",
+      "localizedDescription": "This is an awesome app only available on AltStore.",
+      "iconURL": "https://i.imgur.com/TDEb7Hr.png",
+      "tintColor": "#04b9fc",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSAppleMusicUsageDescription": "Unsandboxing with MacDirtyCow"
+        }
+      },
+      "patreon": {}
+    },
+    {
+      "name": "Taurine",
+      "bundleIdentifier": "org.coolstar.taurine",
+      "marketplaceID": "",
+      "developerName": "Taurine Development Team",
+      "subtitle": "Jailbreak for 14.0-14.8.1",
+      "localizedDescription": "",
+      "iconURL": "https://i.imgur.com/X0C1BW7.png",
+      "tintColor": "#c03c64",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {
+          "NSAccentColorName": "AccentColor"
+        }
+      },
+      "patreon": {}
+    },
+    {
+      "name": "Electra",
+      "bundleIdentifier": "org.coolstar.electra1141",
+      "marketplaceID": "",
+      "developerName": "Electra Development Team",
+      "subtitle": "Jailbreak for 11.0 – 11.4.1",
+      "localizedDescription": "",
+      "iconURL": "https://i.imgur.com/YM9eN7X.png",
+      "tintColor": "#6b7f93",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    },
+    {
+      "name": "Dopamine",
+      "bundleIdentifier": "com.opa334.Dopamine",
+      "marketplaceID": "",
+      "developerName": "Dopamine Development Team",
+      "subtitle": "Jailbreak for iOS 15.0 - 16.6.1*",
+      "localizedDescription": "",
+      "iconURL": "https://i.imgur.com/OTfafU2.png",
+      "tintColor": "#a786a4",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    },
+    {
+      "name": "Undecimus (unc0ver dark)",
+      "bundleIdentifier": "us.diatr.undecimus",
+      "marketplaceID": "",
+      "developerName": "unc0ver dark development team",
+      "subtitle": "Jailbreak for iOS 11.0 - 12.1.2",
+      "localizedDescription": "Alternative to unc0ver with true black (OLED) ui and Sileo support",
+      "iconURL": "https://i.imgur.com/GWl7Ycu.png",
+      "tintColor": "#4663b8",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    },
+    {
+      "name": "unc0ver",
+      "bundleIdentifier": "science.xnu.undecimus",
+      "marketplaceID": "",
+      "developerName": "pwn20wnd and their team",
+      "subtitle": "Jailbreak for iOS 11.0 - 14.8",
+      "localizedDescription": "",
+      "iconURL": "https://i.imgur.com/Altvoec.png",
+      "tintColor": "#3636c8",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    },
+    {
+      "name": "freya",
+      "bundleIdentifier": "com.p4e.freya",
+      "marketplaceID": "",
+      "developerName": "pwned4ever",
+      "subtitle": "Jailbreak for iOS 11.0 - 12.5.6",
+      "localizedDescription": "",
+      "iconURL": "https://i.imgur.com/B83mcel.png",
+      "tintColor": "#e1311d",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    },
+    {
+      "name": "Chimera",
+      "bundleIdentifier": "com.electrateam.chimera",
+      "marketplaceID": "",
+      "developerName": "CoolStar and their team",
+      "subtitle": "Jailbreak for iOS 12 - 12.5.7",
+      "localizedDescription": "",
+      "iconURL": "https://i.imgur.com/Z8TKTQS.png",
+      "tintColor": "#10c2ee",
+      "category": "utilities",
+      "screenshots": [],
+      "versions": [],
+      "appPermissions": {
+        "entitlements": [],
+        "privacy": {}
+      },
+      "patreon": {}
+    }
+  ],
+  "news": []
+}
