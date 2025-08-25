@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head><title>File-Index</title></head>
+<head>
+    <title>File Index</title>
+</head>
 <body>
     <h1>Files in Repo</h1>
     <ul id="file-list"></ul>
 
 <script>
-fetch('https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/')
-    .then(res => res.json())
-    .then(data => {
-        const list = document.getElementById('file-list');
-        data.forEach(file => {
-        const item = document.createElement('li');
-        item.innerHTML = `<a href="${file.download_url}">${file.name}</a>`;
-        list.appendChild(item);
+    fetch('https://api.github.com/repos/wakefulblock262/ios-sources/contents/debs')
+        .then(res => res.json())
+        .then(data => {
+            const list = document.getElementById('file-list');
+                data.forEach(file => {
+                    const item = document.createElement('li');
+                    item.innerHTML = `<a href="${file.download_url}">${file.name}</a>`;
+                    list.appendChild(item);
+        });
     });
-});
 </script>
 </body>
 </html>
