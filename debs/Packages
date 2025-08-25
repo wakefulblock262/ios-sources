@@ -66,92 +66,6 @@ Icon: file:///Applications/Filza.app/AppIcon57x57.png
 Name: Filza File Manager
 Sponsor: thebigboss.org <http://thebigboss.org>
 
-Package: cydia
-Version: 1.1.29
-Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
-Installed-Size: 7160
-Pre-Depends: debianutils, dpkg (>= 1.14.25-8)
-Depends: apt7-lib, apt7-key, cydia-lproj (>= 1.1.10), darwintools, debianutils, dpkg (>= 1.18), org.thebigboss.repo.icons, sed, shell-cmds, system-cmds, uikittools (>= 1.1.4)
-Conflicts: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, ste, yellowsn0w.com, zodttd
-Replaces: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, saurik, ste, yellowsn0w.com, zodttd
-Provides: bigbossbetarepo, cydia-sources
-Filename: ./cydia_1.1.29_iphoneos-arm.deb
-Size: 1292812
-MD5sum: fd007e1478c8619984f8eb55d6717a6c
-SHA1: f1a0e25f1b0fd3b28c999d88bcec7e304de025af
-SHA256: e74854dc8892551fed817b5dd70c15052631009bfd6fab5d5134381f4be366a5
-Section: Packaging
-Priority: required
-Description: graphical iPhone front-end for APT
-Tag: purpose::uikit, cydia::essential, role::enduser
-Author: Jay Freeman (saurik) <saurik@saurik.com>
-Depiction: http://cydia.saurik.com/info/cydia/
-Icon: file:///Applications/Cydia.app/Icon-60.png
-Name: Cydia Installer
-
-Package: cydia-dark
-Version: 1.9.3~chimera5
-Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
-Installed-Size: 9416
-Pre-Depends: debianutils, dpkg (>= 1.14.25-8), firmware (>=5.0)
-Depends: apt7-lib | libapt, apt7-key | apt-key, cydia-lproj (>= 1.1.10), darwintools, debianutils, dpkg (>= 1.18), org.thebigboss.repo.icons, sed, shell-cmds, system-cmds, uikittools (>= 2.0.0), lzma, cydia
-Conflicts: bigboss, com.sosiphone.addcydia, ispazio.net, modmyifone, ste, yellowsn0w.com, zodttd, cydia-uni, cydia-gui
-Replaces: bigboss, bigbossbetarepo, com.sosiphone.addcydia, cydia-sources, ispazio.net, modmyifone, saurik, ste, yellowsn0w.com, zodttd, cydia-gui
-Filename: ./chicydia-1.9.3.deb
-Size: 1366944
-MD5sum: aecb5c5a8717db0a750a6c2a9209e81f
-SHA1: 0765ca536180f7c7587d6198e925de9bb0038d6d
-SHA256: d6a902c38b5a3c5c4c216cb158c9181ce114ca555ba211527122c8ff3df8d513
-Section: Packaging
-Priority: optional
-Description: graphical iPhone front-end for APT
-Tag: purpose::uikit, role::enduser
-Author: Diatrus <me@diatr.us>
-Depiction: http://cydia.saurik.com/info/cydia/
-Icon: file:///Applications/Cydia.app/Icon-60.png
-Name: Cydia for Chimera/Electra
-
-Package: cydia-lproj
-Version: 1.1.12
-Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
-Installed-Size: 712
-Depends: cydia
-Conflicts: org.thebigboss.russiancydia
-Replaces: cydia, org.thebigboss.russiancydia
-Provides: org.thebigboss.russiancydia
-Filename: ./cydia-lproj_1.1.12_iphoneos-arm.deb
-Size: 66876
-MD5sum: 50df4fbd8f163f553a5ba6e4e8fcad15
-SHA1: e3cf092b6e54261f59c7bcbf483d60479a9f86e4
-SHA256: be77311b214122e5ff7dabd001c96b8cd8a4e479362f3163a557d8dd9b520f31
-Section: Packaging
-Priority: required
-Description: languages and translations for Cydia
-Tag: purpose::uikit, cydia::essential, role::enduser
-Author: Jay Freeman (saurik) <saurik@saurik.com>
-Depiction: http://cydia.saurik.com/info/cydia-lproj/
-Name: Cydia Translations
-
-Package: lzma
-Version: 4.32.7-5
-Architecture: iphoneos-arm
-Maintainer: Jay Freeman (saurik) <saurik@saurik.com>
-Installed-Size: 396
-Depends: grep, sed
-Filename: ./lzma_4.32.7-5_iphoneos-arm.deb
-Size: 94200
-MD5sum: 380df3199561ffb73466c6bf25bccbfa
-SHA1: c8474940038ee024dae0d90ca9beec9a3f6c4c2f
-SHA256: eeb6f7a7859d3f5233bc422d01a54fbdde48490be438131ccbd14df4f24998e8
-Section: Archiving
-Priority: important
-Homepage: http://tukaani.org/lzma/
-Description: slower, but better, compression algorithm
-Name: LZMA Utils
-
 Package: org.coolstar.sileo
 Version: 2.5.1
 Architecture: iphoneos-arm
@@ -168,22 +82,6 @@ Author: Amy While <me@anamy.gay>
 Icon: https://getsileo.app/img/icon.png
 Name: Sileo
 Sileodepiction: https://featuredpage.getsileo.app/depiction.json
-
-Package: org.thebigboss.repo.icons
-Version: 1.0
-Architecture: iphoneos-arm
-Maintainer: BigBoss <bigboss@thebigboss.org>
-Installed-Size: 48
-Replaces: cydia, bigboss
-Filename: ./org.thebigboss.repo.icons_1.0.deb
-Size: 11488
-MD5sum: f286c0da9cf71d206bea9aa6bf225701
-SHA1: 401b49fba4dd88d62c2e76dcaf57562a82a4fa7b
-SHA256: 30076cf7179cc1a25a8c33242b4ca6b8b70edf172d16b1368c232b16e4f93e9f
-Section: Repositories
-Priority: optional
-Description: locally cached package icons from BigBoss
-Name: BigBoss Icon Set
 
 Package: xyz.willy.zebra
 Version: 1.1.36
