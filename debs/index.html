@@ -1,18 +1,21 @@
 <!DOCTYPE html>
-<h1>
-    nothing to see here
-</h1>
-<div>
-    <a href="sileo://source/wakefulblock262.github.io/wakefuls-repo">
-        <button>Sileo</button>
-    </a>
-    <a href="cydia://source/wakefulblock262.github.io/wakefuls-repo">
-        <button>Cydia</button>
-    </a>
-    <a href="zebra://source/wakefulblock262.github.io/wakefuls-repo">
-        <button>Zebra</button>
-    </a>
-    <a href="installer://source/wakefulblock262.github.io/wakefuls-repo">
-        <button>Installer</button>
-    </a>
-</div>
+<html>
+<head><title>File Index</title></head>
+<body>
+    <h1>Files in Repo</h1>
+    <ul id="file-list"></ul>
+
+<script>
+fetch('https://api.github.com/repos/YOUR_USERNAME/YOUR_REPO/contents/')
+    .then(res => res.json())
+    .then(data => {
+        const list = document.getElementById('file-list');
+        data.forEach(file => {
+        const item = document.createElement('li');
+        item.innerHTML = `<a href="${file.download_url}">${file.name}</a>`;
+        list.appendChild(item);
+    });
+});
+</script>
+</body>
+</html>
