@@ -1,252 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Debian Packages</title>
-    <style>
-        * { 
-            margin: 0; 
-            padding: 0; 
-            box-sizing: border-box; 
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #ffffff;
-            color: #333333;
-            line-height: 1.6;
-            padding: 20px;
-            max-width: 1000px;
-            margin: 0 auto;
-            transition: background-color 0.3s ease, color 0.3s ease;
-            position: relative;
-            overflow-x: hidden;
-        }
-        
-        h1 {
-            text-align: center;
-            margin: 1em 0;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Debian Packages</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
 
-        .file-list {
-            margin-top: 20px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-        }
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        background: #ffffff;
+        color: #333333;
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
 
-        .files-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+    h1 {
+        text-align: center;
+        margin: 1em 0;
+        color: #333;
+    }
 
-        .files-table th, 
-        .files-table td {
-            padding: 12px 16px;
-            text-align: left;
-            border-bottom: 1px solid #e2e8f0;
-        }
+    .file-list {
+        margin-top: 20px;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
 
-        .files-table th {
-            background-color: #f8fafc;
-            color: #4a5568;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
+    .files-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-        .files-table th:hover {
-            background-color: #f1f5f9;
-        }
+    .files-table th,
+    .files-table td {
+        padding: 12px 16px;
+        text-align: left;
+        border-bottom: 1px solid #e2e8f0;
+    }
 
-        .files-table tbody tr {
-            transition: background-color 0.2s;
-        }
+    .files-table th {
+        background-color: #f8fafc;
+        color: #4a5568;
+        font-weight: 600;
+        cursor: pointer;
+    }
 
-        .files-table tbody tr:hover {
-            background-color: #f8fafc;
-        }
+    .files-table tbody tr:hover {
+        background-color: #f8fafc;
+    }
 
-        .files-table a {
-            color: #3182ce;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
+    .files-table a {
+        color: #3182ce;
+        text-decoration: none;
+    }
 
-        .files-table a:hover {
-            color: #2c5282;
-            text-decoration: underline;
-        }
+    .files-table a:hover {
+        color: #2c5282;
+        text-decoration: underline;
+    }
 
-        .file-size {
-            color: #718096;
-            font-family: monospace;
-        }
+    .file-size,
+    .file-date {
+        color: #718096;
+        font-family: monospace;
+    }
 
-        .file-date {
-            color: #718096;
-            white-space: nowrap;
-        }
+    .loading,
+    .error {
+        text-align: center;
+        padding: 2em;
+        color: #718096;
+    }
 
-        .loading, .error {
-            text-align: center;
-            padding: 2em;
-            color: #718096;
-        }
-
-        .error {
-            color: #e53e3e;
-        }
+    .error {
+        color: #e53e3e;
+    }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Debian Packages</h1>
-        
-        <div id="file-list" class="file-list">
-            <table class="files-table">
-                <thead>
-                    <tr>
-                        <th data-sort="name">Filename</th>
-                        <th data-sort="size">Size</th>
-                        <th data-sort="date">Last Modified</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="3" class="loading">Loading packages...</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<div class="container">
+    <h1>Debian Packages</h1>
+    <div id="file-list" class="file-list">
+        <table class="files-table">
+            <thead>
+                <tr>
+                    <th data-sort="name">Filename</th>
+                    <th data-sort="size">Size</th>
+                    <th data-sort="date">Last Modified</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3" class="loading">Loading packages...</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div>
 
-    <script>
-        // Simple JavaScript to load and display files
-        document.addEventListener('DOMContentLoaded', function() {
-            const tbody = document.querySelector('.files-table tbody');
-            
-            // Format file size
-            function formatFileSize(bytes) {
-                if (bytes === 0) return '0 B';
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const tbody = document.querySelector('.files-table tbody');
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 B';
                 const k = 1024;
                 const sizes = ['B', 'KB', 'MB', 'GB'];
                 const i = Math.floor(Math.log(bytes) / Math.log(k));
-                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-            }
-            
-            // Format date
-            function formatDate(dateString) {
-                const options = { year: 'numeric', month: 'short', day: 'numeric' };
-                return new Date(dateString).toLocaleDateString(undefined, options);
-            }
-            
-            // Load files from GitHub API
-            async function loadFiles() {
-                try {
-                    const response = await fetch('https://api.github.com/repos/wakefulblock262/ios-sources/contents/debs');
-                    if (!response.ok) throw new Error('Failed to fetch files');
-                    
-                    const files = await response.json();
-                    const debFiles = files.filter(file => file.name.endsWith('.deb'));
-                    
-                    if (debFiles.length === 0) {
-                        throw new Error('No .deb files found');
-                    }
-                    
-                    // Sort files by name
-                    debFiles.sort((a, b) => a.name.localeCompare(b.name));
-                    
-                    // Render files
-                    tbody.innerHTML = debFiles.map(file => `
-                        <tr>
-                            <td><a href="${file.download_url}" download>${file.name}</a></td>
-                            <td class="file-size">${formatFileSize(file.size)}</td>
-                            <td class="file-date" title="${new Date(file.updated_at).toLocaleString()}">
-                                ${formatDate(file.updated_at)}
-                            </td>
-                        </tr>
-                    `).join('');
-                    
-                    // Set up sorting
-                    setupSorting();
-                } catch (error) {
-                    console.error('Error:', error);
-                    tbody.innerHTML = `
-                        <tr>
-                            <td colspan="3" class="error">
-                                Failed to load packages. <button onclick="location.reload()">Try again</button>
-                                <div style="margin-top: 0.5rem; color: #e53e3e; font-size: 0.9em;">
-                                    ${error.message}
-                                </div>
-                            </td>
-                        </tr>
-                    `;
-                }
-            }
-            
-            // Set up table sorting
-            function setupSorting() {
-                const headers = document.querySelectorAll('.files-table th[data-sort]');
-                
-                headers.forEach(header => {
-                    header.addEventListener('click', () => {
-                        const sortKey = header.dataset.sort;
-                        const isAsc = header.classList.contains('sort-asc');
-                        const newDir = isAsc ? 'desc' : 'asc';
-                        
-                        // Update UI
-                        headers.forEach(h => {
-                            h.classList.remove('sort-asc', 'sort-desc');
-                        });
-                        header.classList.add(`sort-${newDir}`);
-                        
-                        // Sort and re-render
-                        sortTable(sortKey, newDir);
-                    });
-                });
-            }
-            
-            // Sort table function
-            function sortTable(key, direction) {
-                const rows = Array.from(tbody.querySelectorAll('tr'));
-                
-                rows.sort((a, b) => {
-                    let aVal, bVal;
-                    
-                    if (key === 'name') {
-                        aVal = a.cells[0].textContent;
-                        bVal = b.cells[0].textContent;
-                        return direction === 'asc' 
-                            ? aVal.localeCompare(bVal)
-                            : bVal.localeCompare(aVal);
-                            
-                    } else if (key === 'size') {
-                        aVal = parseFloat(a.cells[1].textContent);
-                        bVal = parseFloat(b.cells[1].textContent);
-                        return direction === 'asc' ? aVal - bVal : bVal - aVal;
-                        
-                    } else if (key === 'date') {
-                        aVal = new Date(a.cells[2].title);
-                        bVal = new Date(b.cells[2].title);
-                        return direction === 'asc' 
-                            ? aVal - bVal 
-                            : bVal - aVal;
-                    }
-                    
-                    return 0;
-                });
-                
-                // Re-append rows in new order
-                rows.forEach(row => tbody.appendChild(row));
-            }
-            
-            // Initial load
-            loadFiles();
-        });
-    </script>
+        return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+    }
+
+    function formatDate(dateString) {
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        return new Date(dateString).toLocaleDateString(undefined, options);
+    }
+
+    async function loadFiles() {
+        try {
+            const response = await fetch('https://api.github.com/repos/wakefulblock262/ios-sources/contents/debs');
+            if (!response.ok) throw new Error('Failed to fetch files');
+
+            const files = await response.json();
+
+            const debFiles = files.filter(file =>
+            file.type === 'file' &&
+            file.name.toLowerCase().endsWith('.deb') &&
+            file.download_url
+        );
+
+        if (debFiles.length === 0) {
+            throw new Error('No .deb files found');
+    }
+
+    debFiles.sort((a, b) => a.name.localeCompare(b.name));
+
+        tbody.innerHTML = debFiles.map(file => `
+            <tr>
+            <td><a href="${file.download_url}" download>${file.name}</a></td>
+            <td class="file-size">${formatFileSize(file.size)}</td>
+            <td class="file-date" title="${new Date(file.updated_at).toLocaleString()}">
+                ${formatDate(file.updated_at)}
+            </td>
+            </tr>
+        `).join('');
+
+        } catch (error) {
+        console.error('Error:', error);
+        tbody.innerHTML = `
+            <tr>
+            <td colspan="3" class="error">
+                Failed to load packages. <button onclick="location.reload()">Try again</button>
+                <div style="margin-top: 0.5rem; font-size: 0.9em;">
+                ${error.message}
+                </div>
+            </td>
+            </tr>
+        `;
+        }
+    }
+
+    loadFiles();
+    });
+</script>
 </body>
 </html>
